@@ -69,14 +69,14 @@ theta_val = np.copy(theta_batch)
 
 """ build graph of training theta"""
 with tf.Graph().as_default():
-    left = tf.placeholder(tf.float32,
-                          shape=[None, params.input_height, params.input_width,
-                                 params.input_channel],
-                          name='left_in')
+    left = tf.placeholder( tf.float32,
+                    shape=[None, params.input_height, params.input_width,
+                    params.input_channel],
+                    name='left_in')
     right = tf.placeholder(tf.float32,
-                           shape=[None, params.input_height, params.input_width,
-                                  params.input_channel],
-                           name='right_in')
+                    shape=[None, params.input_height, params.input_width,
+                    params.input_channel],
+                    name='right_in')
     theta_input = tf.Variable(tf.constant(theta_batch), dtype=tf.float32, name='theta_in')
     T_weight = tf.constant(T_init, dtype=tf.float32, name='T_const')  # pin T weight
     compensateI = tf.constant(4.3, dtype=tf.float32, name='light_comp')  # light compensation

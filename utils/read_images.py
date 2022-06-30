@@ -6,7 +6,7 @@ import numpy as np
 
 def read_stereo_images(source_img_path, id_list):
     """
-    Load stereo images by id_list
+    load stereo images by id_list
     :param source_img_path:
     :param id_list: a list constructed with the index of source picture in the file
     :return:

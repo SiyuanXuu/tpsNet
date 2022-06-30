@@ -155,8 +155,9 @@ def compute_rec_smooth_loss1(est_im, real_im, compensateI, sz_params, T, cu_T, t
     compa_rgb = tf.tile(compa_erosion, [1, 1, 1, 3])
     loss_rec_sum = tf.reduce_sum(tf.multiply(tf.square(est_crop - real_crop - compensateI), compa_rgb), axis=[1, 2, 3])
     compa_sum = tf.reduce_sum(compa_rgb, axis=[1, 2, 3])
+    # reconstruction loss of per pixel per channel
     loss_rec = tf.reduce_mean(tf.divide(loss_rec_sum, compa_sum))
-    # for train T
+    # loss for train T
     T_loss = cu_T - T
     T_loss = tf.reshape(T_loss, [1, d_height, d_width, -1])
     T_loss_ = tf.transpose(T_loss, [3, 1, 2, 0])

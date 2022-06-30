@@ -38,7 +38,7 @@ parser.add_argument('--cpts_row', type=int, help='row of control points', defaul
 parser.add_argument('--cpts_col', type=int, help='col of control points', default=4)
 parser.add_argument('--output_directory', type=str, help='output directory for test disparities', default='output/')
 parser.add_argument('--source_directory', type=str, help='directory to load source images',
-                    default='/home/ubuntu/jupyter_workspace/dataset/real_heart/invivo1_rect/')
+                    default='dataset/invivo1_rect/')
 parser.add_argument('--T_directory', type=str, help='directory to load T matrix',
                     default='output/T_init.txt')
 
@@ -211,7 +211,6 @@ with tf.Graph().as_default():
                 # batch mean loss
                 loss_rec_val_mean = loss_rec_val_mean / compa_sum
                 loss_val_mean = loss_rec_val_mean + loss_smooth_val_mean + loss_norm_val_mean
-                print("train T loss = ", loss_val_mean)
                 if loss_val_mean - loss_rec_temp > 0:
                     tms_overfit += 1
                 else:
