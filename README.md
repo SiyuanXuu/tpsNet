@@ -17,14 +17,14 @@ This is the official implementation for training and testing tpsNet model OTPS u
 If you find our work useful in your research please consider citing our paper:
 
 ```
-@inproceedings{ ,
-  title={Reconstructing-Dynamic-Soft-Tissue-with-Stereo-Endoscope-Based-on-a-Single-layer-Network},
-  author={Bo Yang, Siyuan Xu},
-  journal={},
-  volume={},
-  pages={},
+@inproceedings{ 9875031,
+  title={Reconstruct Dynamic Soft-Tissue With Stereo Endoscope Based on a Single-Layer Network},
+  author={Yang, Bo and Xu, Siyuan and Chen, Hongrong and Zheng, Wenfeng and Liu, Chao},
+  journal={IEEE Transactions on Image Processing},
+  volume={31},
+  pages={5828-5840},
   year={2022},
-  publisher={}
+  doi={10.1109/TIP.2022.3202367}
 }
 ```
 
